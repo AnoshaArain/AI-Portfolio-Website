@@ -1,0 +1,419 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+    height:100vh;
+    background-color: #a6a6a6;
+    color: #e7e3db;
+    
+}
+
+/* Navbar */
+
+.navbar{
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    background-color: #252525;
+    border-bottom:1px solid #444;
+    
+   
+}
+#title{
+    font-size:34px;
+    font-weight:bold;
+    padding: 9px;
+
+}
+
+
+
+#right-line{
+  font-size: xx-large;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-right: 20px;
+}
+
+#left-line{
+  font-size: xx-large;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+/* Main Layout */
+
+.main-container{
+    height:calc(100vh - 60px);
+    display:flex;
+    border-color: #A6A6A6;
+    
+}
+
+/* Profile Section */
+
+.profile-section{
+    width:300px;
+    background-color: #252525;
+    border-radius:2px;
+    display:flex;
+    flex-direction:column;
+    padding:25px;
+    margin: 1px;
+    margin-left: 0px;
+    background-image:url("Images/PROFILE-BG.png");
+    background-size:cover;
+    background-position:start;
+    background-repeat:no-repeat;
+    
+}
+
+/* Profile Image */
+
+.profile-image{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-color:black;
+    margin-top:10px;
+    margin-bottom:20px;
+    overflow:hidden;
+    align-self: center;
+     border:1px solid #d9d1c7;
+    
+     
+    
+
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position: center 30%;
+    transform:scale(1.2);
+}
+
+/* Name */
+
+.profile-name{
+    font-size:38px;
+    align-self: center;
+    font-family: 'Allura', cursive;
+}
+
+/* Role */
+
+.profile-role{
+    font-size: 19PX;
+    color:#bdbdbd;
+    margin-bottom:30px;
+    text-align: end;
+    margin-left: 30px;
+}
+
+/* Links */
+
+.social-links{
+    width:60%;
+    height: 10%;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: medium;
+
+}
+
+.link-btn{
+    background-color:#101010;
+    padding: 8px;
+    border-radius:30px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 2px 5px rgba(0,0,0,0.5);
+    border:1px solid #d9d1c7;
+     color:#f0e4d4;
+    text-decoration:none;
+}
+
+.link-btn:hover{
+    background-color:#4a4a4a;
+}
+
+/* Chatbot Section */
+
+.chatbot-section{
+    flex:1;
+    overflow-y: auto;
+    
+    
+    background-color: #101010;
+    border-radius:2px;
+    display:flex;
+    flex-direction:column;
+    margin-top: 1px;
+    
+
+     background-image:url("Images/CHAT-BG.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* Messages */
+
+.chat-messages{
+    flex:1;
+    padding: 12px;
+    overflow-y:auto;
+   
+}
+
+.chat-messages::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-messages::-webkit-scrollbar-track{
+    background: #252525;
+    border: 1px solid #d9d1c7;
+    border-radius: 2px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+    background: #555555;
+    border-radius:20px;
+    border: 1px solid #d9d1c7;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover{
+    background:#f0e4d4;
+}
+/* Bot Message */
+
+.bot-message{
+    width:fit-content;
+    max-width:70%;
+    background-color:#303030;
+    padding:12px 18px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+/* User Message */
+
+.user-message{
+    
+    width:fit-content;
+    max-width:70%;
+    background-color:#4a4a4a;
+    padding:12px 18px;
+    border-radius: 8px;
+    margin-left:auto;
+    margin-bottom:15px;
+}
+
+/* Bottom Input Area */
+
+
+
+/* Typing Indicator */
+
+.typing-indicator{
+    
+    display:none;
+   margin-left: 10px;
+   margin-bottom: 10px;
+    color:#e7e3db;
+    
+}
+
+.typing-indicator span{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    margin:2px;
+    border-radius:50%;
+    background:#5f5f5e;
+    animation:blink 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2){
+    animation-delay:0.2s;
+}
+
+.typing-indicator span:nth-child(3){
+    animation-delay:0.4s;
+}
+
+@keyframes blink{
+    0%,80%,100%{
+        opacity:0.3;
+    }
+
+    40%{
+        opacity:1;
+    }
+}
+
+/* Input + Button */
+
+.input-container{
+    display:flex; 
+    background-color: #3232328b;
+    position: bottom;
+   
+    height: 55px;
+    
+}
+
+/* Input */
+
+#userInput{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background-color:#3a3a3a;
+    color:white;
+    outline:none;
+    margin: 10px;
+     border:1px solid #d9d1c7;
+
+}
+
+/* Send Button */
+
+#sendBtn{
+    width: 40px;
+    border:none;
+    border-radius:50px;
+    margin: 10px;
+    margin-left: 0px;
+    background-color:black;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+     border:1px solid #d9d1c7;
+
+    
+}
+
+#sendBtn:hover{
+    transform:scale(1.05);
+}
+
+/* layout for mobiles */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+       height:55px;
+       width:auto;
+       
+    }
+
+    #title{
+    font-size:30px;
+    font-weight:bold;
+    padding: 9px;
+
+}
+    
+
+    .main-container{
+        flex-direction:column;
+        height:calc(100vh - 55px);
+    }
+
+    .profile-section{
+        background-image: url("Images/mobile bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: center top;
+        position: relative;
+        width: auto;
+        height:200px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        padding:15px;
+}
+
+.profile-top{
+    display:flex;
+    
+}
+
+
+
+.profile-image{ 
+    width:160px; 
+    height:160px; 
+    border-radius:50%; 
+    align-self: start; 
+    margin-left: 30px; 
+    
+} 
+
+.profile-info{ 
+    margin-top: 50px; 
+
+} 
+.profile-name{ 
+    font-size:34px; 
+    margin-left: 10px; 
+    margin-right: 15px;
+    
+} 
+
+.profile-role{ 
+    font-size:18px; 
+    margin-top: 0px;
+}
+
+.social-links{
+    position: absolute;
+    right:15px;
+    bottom:15px;
+    display:flex;
+    flex-direction: row;
+    gap:6px;
+    justify-content: right;
+   font-size: 12px;
+   
+   
+    
+}
+
+.link-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    width:90px;
+    height:25px;
+
+    font-size:12px;
+    text-decoration:none;
+}
+
+
+
+    .chatbot-section{
+        flex:1;
+    }
+}
