@@ -172,7 +172,7 @@ IMPORTANT INSTRUCTIONS
 
 async function getGeminiReply(question){
 
-    const API_KEY = "AQ.Ab8RN6L7L-a-N2LPOGOvfwYGHRX4OYS8DhH_JHfkM451wVqCPg";
+    const API_KEY = "AQ.Ab8RN6I9JQjeAxbBJGji_VJV4BpT3Hn_iiZoGDndnwfuY8hTAg";
 
     const response = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
